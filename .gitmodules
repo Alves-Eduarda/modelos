@@ -1,0 +1,3 @@
+[submodule "modelos descritivos/metricas_de_distancia"]
+	path = modelos descritivos/metricas_de_distancia
+	url = https://github.com/Alves-Eduarda/metricas_de_distancia.git
