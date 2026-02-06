@@ -56,13 +56,15 @@ def generic_info(df):
 
 # geração das análises gráficas
 
-def dist_graph(df: pd.DataFrame, col: list):
+def dist_graph(df: pd.DataFrame, col: list,ind: int):
 
     df_dist = df[col]
     df_dist.hist(bins=20, figsize=(15, 10), layout=(3, 3), grid=True)
     plt.tight_layout()
+    name_fig = f"distribuicao_{str(ind)}.png"
+    plt.savefig(name_fig,dpi=300)
     plt.show()
-    plt.save()
+    
 
 def bar_graph():
     pass

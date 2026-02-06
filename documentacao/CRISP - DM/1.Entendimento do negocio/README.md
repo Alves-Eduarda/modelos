@@ -1,4 +1,12 @@
-### 📊 Dicionário de Dados (Churn Dataset)
+## Descrição do problema de negócio
+
+O problema de negócio é identificar a parcela de clientes que obtém um perfil propenso a saída/cancelamento do serviço contratado. Analisando os dados, é possível identificar que podemos aplicar um modelo supervisonado utilizando a coluna de churn como nosso rótulo e as demais como features para treinar o algoritmo a identificar os padrões destes perfis.
+
+Para uma empresa que busca identificar previamente a saída de clientes de sua base, seria interessante utilizar este modelo para agir através de estratégias de marketing visando reter este perímetro.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## 📊 Dicionário de Dados (Churn Dataset)
 
 | Coluna | Descrição |
 | :--- | :--- |
@@ -15,6 +23,3 @@
 | **RoamMins** | Média de minutos gastos em roaming (fora da área de cobertura). |
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-O problema de negócio é identificar a parcela de clientes que obtém um perfil propenso a saída/cancelamento do serviço contratado. Analisando os dados, é possível identificar que podemos aplicar um modelo supervisonado utilizando a coluna de churn como nosso rótulo e as demais como features para treinar o algoritmo a identificar os padrões destes perfis.
-
-Para uma empresa que busca identificar previamente a saída de clientes de sua base, seria interessante utilizar este modelo para agir através de estratégias de marketing visando reter este perímetro.
