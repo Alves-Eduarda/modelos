@@ -34,11 +34,11 @@ O problema de negócio é identificar a parcela de clientes que obtém um perfil
 
 Para entendimento do negócio foram criadas funções que buscavam identificar como os dados estão distribuídos, quais suas correlações com a variável alvo (Churn) e se existiam valores que deverão ser tratados na etapa de preparação de dados.
 
-* códigos: 
-    ** download_data,py
-    ** exploratory_data_analysis.py
-    ** graphics_eda.py
-    ** EDA.ipynb
+- códigos: 
+    - download_data,py
+    - exploratory_data_analysis.py
+    - graphics_eda.py
+    - EDA.ipynb
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -46,10 +46,10 @@ Para entendimento do negócio foram criadas funções que buscavam identificar c
 
 Nesta etapa os dados foram padronizados para seguirem para o processo de modelagem.
 
-* códigos
-    ** preparation_data.py
-    ** graphics_prep_data.py
-    ** Preparation_data.ipynb
+- códigos
+    - preparation_data.py
+    - graphics_prep_data.py
+    - Preparation_data.ipynb
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -57,8 +57,8 @@ Nesta etapa os dados foram padronizados para seguirem para o processo de modelag
 
 Os modelos aplicados para resolução deste problema foram : Random Forest, XGboost. Ambos modelos de classificação, considerando que nossa variável alvo obtém duas classes : Usuários com Churn (1) e Uusários sem Churn (0).
 
-* códidos:
-    ** train.py
+- códidos:
+    - train.py
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -66,7 +66,7 @@ Os modelos aplicados para resolução deste problema foram : Random Forest, XGbo
 
 Nesta etapa buscamos analisar a eficiência do modelo com melhor desempenho. 
 
-* códigos
-    ** evaluation.py
+- códigos
+    - evaluation.py
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
