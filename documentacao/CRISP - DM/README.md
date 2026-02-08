@@ -123,7 +123,7 @@ Tivemos os seguintes resultados para os modelos:
 | Weighted Avg F1 | 0,9110 |
 
 
-** A partir do modelo com melhor desempenho,Xgboost sem a aplicação da feature importance, foi criada uma análise em relação a faixa de risco do churn. Segue o resultado obtido:**
+**A partir do modelo com melhor desempenho,Xgboost sem a aplicação da feature importance, foi criada uma análise em relação a faixa de risco do churn. Segue o resultado obtido:**
 
 📈 Resultado por Faixa de Risco
 
