@@ -1,4 +1,4 @@
-# Análise do histórico de Sinistro de Trânsito no Brasil \[ 2007 - 2025 ]
+# Análise do histórico de Sinistros nas Rodovias Federais do Brasil \[ 2007 - 2025 ]
 
 ## Entendimento do negócio
 
@@ -133,9 +133,9 @@ Códigos utilizados:
 
 Aplicação dos modelos para regressão: 
 
-- GradientBoosting
-- Random Forest
-- Decision Tree
+- GradientBoosting (modelo_gradient_boosting.pkl)
+- Random Forest (modelo_random_forest.pkl)
+- Decision Tree (modelo_decision_tree.pkl)
 
 Código com os modelos:
 
@@ -144,6 +144,24 @@ Código com os modelos:
 ## Avaliação dos modelos
 
 - evaluation_code.py
+
+*resultado encontrado para o conjunto de validação*
+
+| Modelo | MAE ↓ | RMSE ↓ | R² ↑ | Desempenho |
+|--------|------|-------|-----|-------------|
+| Gradient Boosting | 0.4662 | 1.1183 | 0.1712 | 🟢 Melhor |
+| Random Forest | 0.5731 | 1.1329 | 0.1494 | 🟡 Bom |
+| Decision Tree | 0.6675 | 1.7261 | -0.9747 | 🔴 Ruim |
+
+
+*resultado encontrado para o conjunto de teste*
+
+| Modelo | MAE ↓ | RMSE ↓ | R² ↑ | Desempenho |
+|--------|------|-------|-----|-------------|
+| Gradient Boosting | 0.4586 | 1.0886 | 0.1775 | 🟢 Melhor |
+| Random Forest | 0.5663 | 1.1072 | 0.1491 | 🟡 Bom |
+| Decision Tree | 0.6586 | 1.6818 | -0.9630 | 🔴 Ruim |
+
 
 ## Visualização dos gráficos
 

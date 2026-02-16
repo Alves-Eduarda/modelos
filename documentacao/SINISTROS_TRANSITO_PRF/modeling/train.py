@@ -2,7 +2,7 @@
 import pandas as pd
 from sklearn.ensemble import (RandomForestRegressor, GradientBoostingRegressor)
 from sklearn.tree import DecisionTreeRegressor
-
+import pickle
 
 
 def variable_to_model(df,max_year_train,year_val,max_year_test):
@@ -35,6 +35,10 @@ def random_forest_model(X,y):
     regr_model = RandomForestRegressor(random_state=42)
     regr_model.fit(X, y)
 
+    # salvando o modelo treinado
+    with open("modelo_random_forest.pkl", "wb") as f:
+        pickle.dump(regr_model, f)
+
     return regr_model
 
 def decision_tree_model(X,y):
@@ -42,6 +46,10 @@ def decision_tree_model(X,y):
     decision_regr = DecisionTreeRegressor(random_state=42)
 
     decision_regr_model = decision_regr.fit(X,y)
+
+    # salvando o modelo treinado
+    with open("modelo_decision_tree.pkl", "wb") as f:
+        pickle.dump(decision_regr_model, f)
     
     return decision_regr_model
 
@@ -51,4 +59,9 @@ def gradboost_model(X,y):
                                            
     grad_boost_model = grad_boost.fit(X,y)
 
+    # salvar
+    with open("modelo_gradient_boosting.pkl", "wb") as f:
+        pickle.dump(grad_boost_model, f)
+
     return grad_boost_model
+
