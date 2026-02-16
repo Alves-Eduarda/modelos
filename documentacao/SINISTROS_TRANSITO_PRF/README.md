@@ -42,15 +42,14 @@ Este estudo pode nos ajudar a identificar quais rodovias apresentam quantidades 
 
 Os dados podem ser baixados através do portal de dados abertos do Governo Federal. Cada base fica disponível em uma pasta compactada (.zip). Abaixo segue as informações para quem deseja fazer o download das informações:
 
-Fonte: https://dados.gov.br/dados/conjuntos-dados/sinistros-de-transito-agrupados-por-ocorrencia
-E-mail da área técnica: direx@prf.gov.br
+- Fonte: https://dados.gov.br/dados/conjuntos-dados/sinistros-de-transito-agrupados-por-ocorrencia
+- E-mail da área técnica: direx@prf.gov.br
 
 Arquivos: 
 
-1. Cada extração dos anos está localizada na pasta arquivos_descompactados
-2. O arquivo *historico_datatran.csv* é o resultado da junção dos arquivos da pasta arquivos_descompactados
+1. Cada extração dos anos deve está localizada na pasta arquivos descompactados (*devido ao tamanho dos arquivos passar do limite permitido, eles não foram inclusos na pasta*)
 3. Os arquivos *municipio_tse_ibge.csv e leiame- municipio_tse_ibge.pdf* contém os dados referentes aos códigos de IBGE para UF e MUNICÍPIO 
-4. O arquivo *lista_municipios_sem_correspondencia.xlsx* contém os municípios e seus códigos ao qual não obteram correspondência com a base do histórico de sinistros
+4. O arquivo *lista_municipios_sem_correspondencia.xlsx* contém os municípios e seus códigos ao qual não obtiveram correspondência com a base do histórico de sinistros
 
 Códigos utilizados:
 
@@ -101,16 +100,16 @@ Para isso foram exploradas as seguintes análises:
 
 - horário
 
-![Volume de feridos e mortes por horário](visualizationtotal_de_mortes_feridos_por_horario.png)
+![Volume de feridos e mortes por horário](visualization/total_de_mortes_feridos_por_horario.png)
 
 
 4. Quais as principais causas de acidentes através da nuvem de palavras
 
-![Nuvem de palavras - principais causas de acidentes](nuvem_de_palavras.png)
+![Nuvem de palavras - principais causas de acidentes](visualization/nuvem_de_palavras.png)
 
 5. Quais são os dias da semana com maior quantidade de feridos
 
-![Volume de feridos por dia de semana](total_de_mortes_por_dia_da_semana.png)
+![Volume de feridos por dia de semana](visualization/total_de_mortes_por_dia_da_semana.png)
 
 6. Análise da permanência dos outliers (números acima da média devido aos desastres nas rodovias)
 
