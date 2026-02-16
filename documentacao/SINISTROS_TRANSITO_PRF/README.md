@@ -7,34 +7,35 @@ Este estudo pode nos ajudar a identificar quais rodovias apresentam quantidades 
 
 ### 📊 Dicionário de Dados
 
-|| Coluna | Tipo | Descrição |
-|--------|------|-----------|
-| id | inteiro | Identificador único do registro do acidente |
-| data_inversa | string (data) | Data do acidente no formato DD/MM/AAAA |
-| dia_semana | string | Dia da semana em que ocorreu o acidente |
-| horario | string (hora) | Horário do acidente |
-| uf | string | Unidade Federativa onde ocorreu o acidente |
-| br | string | Rodovia federal (BR) |
-| km | string | Quilômetro da rodovia onde ocorreu o acidente |
-| municipio | string | Município do local do acidente |
-| causa_acidente | string | Causa principal do acidente |
-| tipo_acidente | string | Tipo do acidente (ex: colisão, capotamento) |
-| classificacao_acidente | string | Classificação do acidente quanto à gravidade |
-| fase_dia | string | Fase do dia (ex: dia, noite, amanhecer) |
-| sentido_via | string | Sentido da via no momento do acidente |
-| condicao_metereologica | string | Condição meteorológica no momento do acidente |
-| tipo_pista | string | Tipo de pista (simples, dupla, etc.) |
-| tracado_via | string | Traçado da via (reta, curva, etc.) |
-| uso_solo | string | Uso do solo no local (urbano ou rural) |
-| ano | inteiro | Ano de ocorrência do acidente |
-| pessoas | inteiro | Número total de pessoas envolvidas |
-| mortos | inteiro | Número de vítimas fatais |
-| feridos_leves | inteiro | Número de feridos leves |
-| feridos_graves | inteiro | Número de feridos graves |
-| ilesos | inteiro | Número de pessoas sem ferimentos |
-| ignorados | inteiro | Número de pessoas com estado ignorado |
-| feridos | inteiro | Total de pessoas feridas |
-| veiculos | inteiro | Número de veículos envolvidos |
+| Coluna                 | Tipo          | Descrição                                     |
+| ---------------------- | ------------- | --------------------------------------------- |
+| id                     | inteiro       | Identificador único do registro do acidente   |
+| data_inversa           | string (data) | Data do acidente no formato DD/MM/AAAA        |
+| dia_semana             | string        | Dia da semana em que ocorreu o acidente       |
+| horario                | string (hora) | Horário do acidente                           |
+| uf                     | string        | Unidade Federativa onde ocorreu o acidente    |
+| br                     | string        | Rodovia federal (BR)                          |
+| km                     | string        | Quilômetro da rodovia onde ocorreu o acidente |
+| municipio              | string        | Município do local do acidente                |
+| causa_acidente         | string        | Causa principal do acidente                   |
+| tipo_acidente          | string        | Tipo do acidente (ex: colisão, capotamento)   |
+| classificacao_acidente | string        | Classificação do acidente quanto à gravidade  |
+| fase_dia               | string        | Fase do dia (ex: dia, noite, amanhecer)       |
+| sentido_via            | string        | Sentido da via no momento do acidente         |
+| condicao_metereologica | string        | Condição meteorológica no momento do acidente |
+| tipo_pista             | string        | Tipo de pista (simples, dupla, etc.)          |
+| tracado_via            | string        | Traçado da via (reta, curva, etc.)            |
+| uso_solo               | string        | Uso do solo no local (urbano ou rural)        |
+| ano                    | inteiro       | Ano de ocorrência do acidente                 |
+| pessoas                | inteiro       | Número total de pessoas envolvidas            |
+| mortos                 | inteiro       | Número de vítimas fatais                      |
+| feridos_leves          | inteiro       | Número de feridos leves                       |
+| feridos_graves         | inteiro       | Número de feridos graves                      |
+| ilesos                 | inteiro       | Número de pessoas sem ferimentos              |
+| ignorados              | inteiro       | Número de pessoas com estado ignorado         |
+| feridos                | inteiro       | Total de pessoas feridas                      |
+| veiculos               | inteiro       | Número de veículos envolvidos                 |
+
 
 
 ## Entendimento dos dados
