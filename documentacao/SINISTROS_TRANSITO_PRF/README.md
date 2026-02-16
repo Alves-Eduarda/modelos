@@ -2,16 +2,8 @@
 
 ## Entendimento do negócio
 
-Este projeto visa prever a quantidade de sinistro nas rodovias do Brasil baseados no dados levantados pela Polícia Rodoviária Federal desde 01/01/2007. O intuito é identificar quais rodovias apresentam quantidades excessivas de sinistro para atuar preventivamente e evitar que tais casos ocorram através de ações de educação populacional sobre os riscos da direção de automóveis em rodovias.
-
-Ideia ->
-
-* Leitura dos dados - ok
-* Análise exploratória dos dados - em desenvolvimento
-* Tratamento dos dados - a iniciar
-* Aplicação de um modelo de regressão/classificação - target -> Feridos
-* Avaliação dos dados
-* criação de uma página no streamlit para projetar o mapa das rodovias no Brasil e como estão em quantidade os sinistros.
+Este projeto visa prever a quantidade de sinistro nas rodovias do Brasil baseados no dados levantados pela Polícia Rodoviária Federal desde 01/01/2007. 
+Este estudo pode nos ajudar a identificar quais rodovias apresentam quantidades excessivas de sinistro para atuar preventivamente e evitar que tais casos ocorram através de ações de educação populacional sobre os riscos da direção de automóveis em rodovias.
 
 ### 📊 Dicionário de Dados
 
