@@ -1,9 +1,8 @@
-# Previsão de feridos por Sinistros nas Rodovias Federais no Brasil
+# Previsão de feridos ocasionados por Sinistros nas Rodovias Federais no Brasil
 
 ## Entendimento do negócio
 
-Este projeto visa prever a quantidade de feridos em sinistros registrados nas rodovias federais do Brasil baseados no histórico construído pela Polícia Rodoviária Federal desde 2007. 
-Este estudo pode nos ajudar a identificar quais rodovias apresentam quantidades excessivas de sinistro para atuar preventivamente e evitar que tais casos ocorram através de ações de educação populacional sobre os riscos da direção de automóveis em rodovias.
+Este projeto visa prever a quantidade de feridos em sinistros registrados nas rodovias federais do Brasil baseados no histórico construído pela Polícia Rodoviária Federal desde 2007. Este estudo pode nos ajudar a identificar quais rodovias apresentam quantidades excessivas de sinistro para atuar preventivamente e evitar que tais casos ocorram através de ações de educação populacional sobre os riscos da direção de automóveis em rodovias.
 
 ### 📊 Dicionário de Dados
 
@@ -210,5 +209,7 @@ A partir da base fake gerada a partir do histórico levando em consideração 20
 - média = 0.697
 - mediana = 0.645
 - desvio padrão = 0.707
+
+![avaliacao_do_modelo_previsto_vs_real](visualization/distribuicao_real_vs_prevista.png)
 
 No momento o modelo apresenta boa capacidade de previsão para a maioria dos eventos, porém demonstra dificuldade em capturar ocorrências de alta gravidade, sendo necessário avaliar algumas ações para melhorar a predição de casos extremos/raros.
