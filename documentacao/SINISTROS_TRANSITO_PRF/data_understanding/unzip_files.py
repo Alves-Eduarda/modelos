@@ -5,6 +5,7 @@ import zipfile
 from pathlib import Path
 import sqlite3
 import pandas as pd
+import numpy as np
 
 dir_cur = Path.cwd()
 
@@ -57,7 +58,6 @@ def check_consistencia_colunas(dir):
     return colunas, qtd_colunas, tam_bases
 
 
-
 def generate_files(dir) -> pd.DataFrame:
 
     df_final = pd.DataFrame()
@@ -78,3 +78,79 @@ def generate_sql_file(dir):
     conn = sqlite3.connect("dados.db")
     tabela.to_sql("tabela", conn, if_exists="replace", index=False)
     conn.close()
+
+
+def generate_random_sample(dir, n_registros=1000,seed=42):
+
+    df = generate_files(dir)
+
+    np.random.seed(seed)
+
+    # intervalo de datas
+    datas = pd.to_datetime(
+        np.random.choice(
+            pd.date_range("2026-01-01", "2026-06-30"),
+            size=n_registros,
+            replace=True
+        )
+    )
+
+    novo = pd.DataFrame()
+
+    # id sequencial
+    novo["id"] = range(1, n_registros + 1)
+
+    # data
+    novo["data_inversa"] = datas.strftime("%d/%m/%Y")
+    novo["ano"] = 2026
+    novo["dia_semana"] = datas.day_name(locale='pt_BR').str.lower()
+
+    # horario aleatório
+    segundos = np.random.randint(0, 24*60*60, n_registros)
+    novo["horario"] = pd.to_datetime(segundos, unit="s").strftime("%H:%M:%S")
+
+    # função para amostragem proporcional
+    def sample(col):
+        dist = df[col].value_counts(normalize=True)
+        return np.random.choice(
+            dist.index,
+            size=n_registros,
+            p=dist.values
+        )
+
+    # colunas categóricas
+
+    cols_cat = [
+        'uf','br','km','municipio','causa_acidente','tipo_acidente',
+        'classificacao_acidente','fase_dia','sentido_via',
+        'condicao_metereologica','tipo_pista','tracado_via','regional','uso_solo',
+        'latitude','longitude','delegacia','uop'
+    ]
+
+    for c in cols_cat:
+        novo[c] = sample(c)
+
+    # variáveis numéricas baseadas na distribuição
+    def sample_num(col):
+        return np.random.choice(df[col].dropna(), size=n_registros)
+
+    novo["veiculos"] = sample_num("veiculos")
+    novo["pessoas"] = sample_num("pessoas")
+
+    # gerar vítimas coerentes
+    novo["mortos"] = np.random.binomial(novo["pessoas"], 0.02)
+    novo["feridos_graves"] = np.random.binomial(novo["pessoas"], 0.05)
+    novo["feridos_leves"] = np.random.binomial(novo["pessoas"], 0.15)
+
+    novo["feridos"] = novo["feridos_leves"] + novo["feridos_graves"]
+
+    novo["ilesos"] = np.maximum(
+        0,
+        novo["pessoas"] - (novo["mortos"] + novo["feridos"])
+    )
+
+    novo["ignorados"] = np.random.binomial(novo["pessoas"], 0.01)
+
+    return novo
+
+

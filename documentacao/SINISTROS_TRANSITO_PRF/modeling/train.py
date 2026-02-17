@@ -1,8 +1,10 @@
 #importando as bibliotecas
-import pandas as pd
-from sklearn.ensemble import (RandomForestRegressor, GradientBoostingRegressor)
-from sklearn.tree import DecisionTreeRegressor
 import pickle
+
+import pandas as pd
+from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor, HistGradientBoostingRegressor
+from sklearn.linear_model import PoissonRegressor
+from sklearn.tree import DecisionTreeRegressor
 
 
 def variable_to_model(df,max_year_train,year_val,max_year_test):
@@ -59,9 +61,36 @@ def gradboost_model(X,y):
                                            
     grad_boost_model = grad_boost.fit(X,y)
 
-    # salvar
+    # salvamento do modelo
     with open("modelo_gradient_boosting.pkl", "wb") as f:
         pickle.dump(grad_boost_model, f)
 
     return grad_boost_model
+
+def poissonregr_model(X,y):
+
+    pregr = PoissonRegressor(alpha=0)
+    
+    pregr_model = pregr.fit(X,y)
+
+    # salvamento
+    with open("modelo_poisson_regressor.pkl", "wb") as f:
+        pickle.dump(pregr_model, f)
+
+    return pregr_model
+
+def hist_gradboost_model(X,y):
+
+    histgrad_boost = HistGradientBoostingRegressor(loss="poisson")
+
+    hgrad_model = histgrad_boost.fit(X,y)
+
+    # salvamento
+    with open("modelo_hist_gradient_boosting.pkl", "wb") as f:
+        pickle.dump(hgrad_model, f)
+
+    return hgrad_model
+
+
+
 

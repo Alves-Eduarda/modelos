@@ -21,12 +21,20 @@ from data_understanding.eda import (convert_to_numeric, days_week,
 from data_understanding.unzip_files import generate_files
 
 
-def preparation_data(dir) -> pd.DataFrame:
+def preparation_data(dir,tipo_tabela,tabela) -> pd.DataFrame:
 
     t_inicial = time.time()
 
-    #leitura da base
-    bases = generate_files(dir)
+    if tipo_tabela == "real":
+
+        #leitura da base
+        bases = generate_files(dir)
+
+    elif tipo_tabela == "fake":
+        bases = tabela
+        
+    else:
+        return "Configurações de preparação não definidas. Tente novamente"
 
     #Tratamento das colunas
     
